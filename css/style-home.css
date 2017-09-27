@@ -23,42 +23,41 @@ section {
 	background-size:cover;
 }
 .title{
-	top:100px;
+	top:206px;
 	margin-left: 15%;
 	position:absolute;
-	text-align:left;
+    text-align:left;
+    width: 39% !important;
 }
-.title .h1
+.title .big-title
 {
-	font-family:Roboto-Bold;
-	font-size:5.5vmax;
-	color:#1565c0;
-	letter-spacing:0.76px;
-
+	font-size: 64px;
+    color: #1565c0;
+    letter-spacing: 0.76px;
+    text-align: left;
+    font-weight: bold;
+    line-height: 70px;
 }
-.title .p1
+.title .desc
 {
-	top:380px;
-	width:70%;
-	font-family:Roboto-Regular;
+    margin-top: 28px;
 	font-size:18px;
 	color:#1565c0;
 	letter-spacing:0.21px;
 	line-height:30px;
 }
-.button
-{
-	background:#00acc1;
-	border-radius:10px;
-	width:205px;
-	font-size:24px;
-	letter-spacing:0.28px;
-	text-align:center;
-	text-decoration:none;
-	padding:5px 0;
-    color: white;
-	position:absolute;
 
+.title .more-about-btn {
+    margin-top: 71px;
+}
+
+.title .more-about-btn .btn {
+    border-radius:10px;
+    width:205px;
+    height:52px;
+    letter-spacing:0.28px;
+    font-size:24px;
+    line-height: 32px;
 }
 .service
 {
@@ -72,7 +71,7 @@ section {
 {
 	text-align:center;
 	margin:25px;
-	float-left;
+	float: left;
 }
 .ser-item a
 {
