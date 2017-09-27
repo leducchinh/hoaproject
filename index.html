@@ -2,77 +2,113 @@
 <html>
 
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="shortcut icon" href="images/favicon.ico">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<link rel="stylesheet" type="text/css" href="css/style-home.css">
 	<link rel="stylesheet" type="text/css" href="css/styles-nav.css">
-	<link rel="stylesheet" type="text/css" href="/css/style-tab.css">
-	<link rel="stylesheet" type="text/css" href="/css/style-FAQ.css">
-	<link rel="stylesheet" type="text/css" href="css/footer-distributed-with-address-and-phones.css">
-	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/responsive-tabs.css">
+	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style-tab.css">
 
+	<script src="js/modernizr.custom.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
-	<script src="js/modernizr.custom.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/fastclick.js"></script>
-	<script src="js/scroll.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
+	<style>
+		/* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+
+		.read-more-state {
+			display: none;
+		}
+
+		.read-more-target {
+			opacity: 0;
+			max-height: 0;
+			font-size: 0;
+			transition: .25s ease;
+		}
+
+		.read-more-state:checked~.read-more-wrap .read-more-target {
+			opacity: 1;
+			font-size: inherit;
+			max-height: 999em;
+		}
+
+		.read-more-state~.read-more-trigger:before {
+			content: 'Show more';
+		}
+
+		.read-more-state:checked~.read-more-trigger:before {
+			content: 'Show less';
+		}
+
+		.read-more-trigger {
+			cursor: pointer;
+			display: inline-block;
+			padding: 0 .5em;
+			color: #EE7899;
+			font-size: .9em;
+			line-height: 2;
+			margin: 0 20px;
+		}
+		/* Other style */
+
+		p {
+			padding: 2%;
+
+			color: #00ACC1;
+			width: 100%;
+			letter-spacing: 0.19px;
+			line-height: 22px;
+		}
+	</style>
 	<title>Connecting Communication & Solutions</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbarSupportedContent">
 	<header>
-		<nav class="navbar">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-							  <span class="icon-bar"></span>
-							  <span class="icon-bar"></span>
-							  <span class="icon-bar"></span>                        
-							</button>
-
-					<a href="#about" class="logo navbar-brand" data-scroll>
+		<nav class="navbar navbar-expand-lg navbar-light">
+			<div class="navbar-icon">
+				<a href="#about" class="logo navbar-brand" data-scroll>
 									<img src="images/CCS-logo.png" alt="ccslogo" >
 								</a>
-				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li class="menu-item active"><a href="#about" data-scroll>About</a></li>
-						<li class="menu-item"><a href="#service1" data-scroll>Service</a></li>
-						<li class="menu-item"><a href="#FAQ" data-scroll>FAQ</a></li>
-						<li class="menu-item"><a href="#download" data-scroll>Download</a></li>
-						<li class="menu-item"><a href="#contact" data-scroll>Contact</a></li>
-						<li class="menu-item"><a href="https://www.ccsidd.com/rtone" target="_blank">R Tone</a></li>
-					</ul>
-				</div>
 			</div>
-			<!-- /.container-fluid -->
-		</nav>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			 aria-controls="navbarSupportedContent"
+			 aria-expanded="false" aria-label="Toggle navigation">
+						 <span class="navbar-toggler-icon"></span>
+					   </button>
 
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class="menu-item active"><a href="#about" data-scroll>About</a></li>
-						<li class="menu-item"><a href="#service1" data-scroll>Service</a></li>
-						<li class="menu-item"><a href="#FAQ" data-scroll>FAQ</a></li>
-						<li class="menu-item"><a href="#download" data-scroll>Download</a></li>
-						<li class="menu-item"><a href="#contact" data-scroll>Contact</a></li>
-						<li class="menu-item"><a href="https://www.ccsidd.com/rtone" target="_blank">R Tone</a></li>
-					</ul>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item menu-item"><a class="nav-link" href="#about" data-scroll>About</a></li>
+					<li class="nav-item menu-item"><a class="nav-link" href="#service1" data-scroll>Service</a></li>
+					<li class="nav-item menu-item"><a class="nav-link" href="#FAQ" data-scroll>FAQ</a></li>
+					<li class="nav-item menu-item"><a class="nav-link" href="#download" data-scroll>Download</a></li>
+					<li class="nav-item menu-item"><a class="nav-link" href="#contact" data-scroll>Contact</a></li>
+					<li class="nav-item menu-item r-tone"><a class="nav-link" href="https://www.ccsidd.com/rtone" target="_blank">R Tone</a></li>
+				</ul>
+				<div class="r-tone">
+					<a href="https://www.ccsidd.com/rtone" target="_blank">
+						<div>
+							<img src="images/fly.png" alt="ccslogo">
+						</div>
+						<div>
+							R Tone
+						</div>
+					</a>
 				</div>
-				<!-- /.navbar-collapse -->
 			</div>
-			<!-- /.container-fluid -->
 		</nav>
 	</header>
 	<section id="about">
@@ -512,8 +548,11 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 			})
 		</script>
 	</section>
-	<section id="download" style="height:400px;">
-		<div class="download">
+
+	<div class="row"></div>
+
+	<section id="download" style="margin-top:500px !important;height:400px;">
+		<div class="download" style="margin-top:50%;">
 			<div class="col-md-6" style="margin-bottom:20px">
 				<a href="#">
 								<span class="icon" >
@@ -662,6 +701,14 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 			</footer>
 		</div>
 	</section>
+
+
+
+	<script src="js/fastclick.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/fixed-responsive-nav.js"></script>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
 </body>
 

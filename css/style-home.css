@@ -3,12 +3,12 @@
 
 
 body {
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    background: #fff;
-    font-family:roboto;
-    background-image:url(../images/bg-content.png);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  background: #fff;
+  font-family:roboto !important;
+	background-image:url(../images/bg-content.png);
 	background-repeat:repeat-y;
     background-size: contain;
 }
@@ -174,9 +174,7 @@ panel p a:active {
 }
 .contact
 {
-	margin:80px;
 	width:100%;
-/*	height:800px;*/
 	display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
