@@ -17,13 +17,15 @@ main {
   max-width: 100;
   padding: 50px;
   margin: 0 auto;
-  background: #fff;
 }
 
 section1 {
   display: none;
-  padding: 20px 0 0;
-  border-top: 1px solid #ddd;
+  padding: 20px 10px 0 0;
+}
+
+section1 button:focus {
+  outline: 1px dotted #00acc1 !important;
 }
 
 input {
@@ -46,22 +48,54 @@ label:before {
   margin-right: 10px;
 }
 
-label[for*='1']:before { content: '\f072'; }
-label[for*='2']:before { content: '\f10b'; }
-label[for*='3']:before { content: '\f112'; }
-label[for*='4']:before { content: '\f064'; }
-label[for*='5']:before { content: '\f0ac'; }
-label[for*='6']:before { content: '\f013'; }
 label:hover {
   color: #888;
   cursor: pointer;
 }
 
-input:checked + label {
-  color: #555;
-  border: 1px solid #ddd;
-  border-top: 2px solid orange;
-  border-bottom: 1px solid #fff;
+#FAQ input:checked + label {
+  background: #1565c0;
+  border: 1px solid #1565c0;
+  color: white;
+}
+
+#FAQ label {
+  width: 16.6%;
+  padding: 15px 15px;
+  border: 1px solid #1565c0;
+  color: #1565c0;
+  margin-right: -5px;
+  position: relative;
+  letter-spacing:0.16px;
+  vertical-align: middle;
+}
+
+#FAQ .definitions {
+  padding-top: 27px !important;
+  padding-bottom: 27px !important;
+}
+
+#FAQ input:checked + label:after, #FAQ input:checked + label:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#FAQ input:checked + label:after {
+	border-top-color: #1565c0;
+	border-width: 20px;
+	margin-left: -20px;
+}
+
+#FAQ input:checked + label:before {
+	border-top-color: #1565c0;
+	border-width: 20px;
+	margin-left: -20px;
 }
 
 #tab1:checked ~ #content1,

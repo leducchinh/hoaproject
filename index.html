@@ -11,67 +11,18 @@
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<link rel="stylesheet" type="text/css" href="css/style-home.css">
 	<link rel="stylesheet" type="text/css" href="css/styles-nav.css">
+	<link rel="stylesheet" type="text/css" href="css/style-tab.css">
 	<link rel="stylesheet" href="css/responsive-tabs.css">
 	<link rel="stylesheet" href="css/footer-distributed-with-address-and-phones.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style-tab.css">
 
 	<script src="js/modernizr.custom.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-
-	<style>
-		/* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-
-		.read-more-state {
-			display: none;
-		}
-
-		.read-more-target {
-			opacity: 0;
-			max-height: 0;
-			font-size: 0;
-			transition: .25s ease;
-		}
-
-		.read-more-state:checked~.read-more-wrap .read-more-target {
-			opacity: 1;
-			font-size: inherit;
-			max-height: 999em;
-		}
-
-		.read-more-state~.read-more-trigger:before {
-			content: 'Show more';
-		}
-
-		.read-more-state:checked~.read-more-trigger:before {
-			content: 'Show less';
-		}
-
-		.read-more-trigger {
-			cursor: pointer;
-			display: inline-block;
-			padding: 0 .5em;
-			color: #EE7899;
-			font-size: .9em;
-			line-height: 2;
-			margin: 0 20px;
-		}
-		/* Other style */
-
-		p {
-			padding: 2%;
-
-			color: #00ACC1;
-			width: 100%;
-			letter-spacing: 0.19px;
-			line-height: 22px;
-		}
-	</style>
 	<title>Connecting Communication & Solutions</title>
 </head>
 
@@ -83,8 +34,7 @@
 									<img src="images/CCS-logo.png" alt="ccslogo" >
 								</a>
 			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			 aria-controls="navbarSupportedContent"
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 			 aria-expanded="false" aria-label="Toggle navigation">
 						 <span class="navbar-toggler-icon"></span>
 					   </button>
@@ -126,67 +76,65 @@
 		</div>
 	</section>
 	<section style="margin-top:80px !important" id="service1">
-		<div class="service">
-			<div class="col-md-4">
-				<div class="ser-item col-md-12">
-					<input type="checkbox" class="read-more-state" id="post-1" />
+		<div class="container service">
+			<div class="row">
+				<div class="ser-item col">
 					<img src="images/ser-item-1.png" alt="service" style="height:70px;">
-					<h2 style="height:52px">1505 PREMIUM CONNECT</h2>
-					<p class="read-more-wrap">The 1505 Premium Connect service is an alternative to making Long Distance Calls in Singapore <br>
-						<span class="read-more-target">We are able to provide uncompromising call quality which is comparable to the International Direct Dial (IDD) as offered by Fixed Based Operators (FBO) . We have sinced providing a consistent and robust voice network to our faithful customers while enjoying massive savings on their International calls.</span></p>
-
-					<label for="post-1" class="read-more-trigger"></label>
+					<h2>1505 PREMIUM CONNECT</h2>
+					<p class="read-more-wrap">
+						<input type="checkbox" class="read-more-state" id="post-1" />
+						The 1505 Premium Connect service is an alternative to making Long Distance Calls in Singapore.<span class="read-more-target">We are able to provide uncompromising call quality which is comparable to the International Direct Dial (IDD) as offered by Fixed Based Operators (FBO) . We have sinced providing a consistent and robust voice network to our faithful customers while enjoying massive savings on their International calls.
+						</span>
+						<label for="post-1" class="read-more-trigger"></label>
+					</p>
 				</div>
-				<div class="ser-item col-md-12">
-					<input type="checkbox" class="read-more-state" id="post-2" />
+				<div class="ser-item col">
 					<img src="images/ser-item-2.png" alt="service" style="height:70px;">
-					<h2 style="height:52px">MOBILE SERVICE</h2>
-					<p class="read-more-wrap">CCS has attained the Mobile Virtual Network Operator License (MVNO) in 2009, where we provide postpaid mobile plans
-						to our customers.
-						<span class="read-more-target">CCS had maintained close working relationship with our existing backend providers, in providing attractive and competitive pricing plans offering to our customers. We have built a good base of customers who are enjoying good pricing schemes and maintaining a responsive customer service team, to assist in resolving their day-to-day mobile issues. We are able to provide an in-depth analysis on your existing mobile bills and defined the most economical plans to suit your needs. </span></p>
-
-					<label for="post-2" class="read-more-trigger"></label>
+					<h2>MOBILE SERVICE</h2>
+					<p class="read-more-wrap">
+						<input type="checkbox" class="read-more-state" id="post-2" />
+						CCS has attained the Mobile Virtual Network Operator License (MVNO) in 2009, where we provide postpaid mobile plans to our customers.<span class="read-more-target"> CCS had maintained close working relationship with our existing backend providers, in providing attractive and competitive pricing plans offering to our customers. We have built a good base of customers who are enjoying good pricing schemes and maintaining a responsive customer service team, to assist in resolving their day-to-day mobile issues. We are able to provide an in-depth analysis on your existing mobile bills and defined the most economical plans to suit your needs.</span>
+						<label for="post-2" class="read-more-trigger"></label>
+					</p>
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="ser-item  col-md-12">
-					<input type="checkbox" class="read-more-state" id="post-3" />
+				<div class="ser-item col">
 					<img src="images/ser-item-3.png" alt="service" style="height:70px;">
-					<h2 style="height:52px">CCS CALL BACK SERVICE</h2>
-					<p class="read-more-wrap">The CCS callback service is basically an alternative in making calls at lower rates while customers are roaming overseas
-						<span class="read-more-target">It is an old but effective technique to make calls to any destination while you are traveling overseas. The effective savings can be as high as 60% down from normal calls made while roaming. CCS callback had tried our best to ensure high success rates to achieve a callback, and to outshine in call quality on our Tandem Based Network.</span></p>
-
-					<label for="post-3" class="read-more-trigger"></label>
-				</div>
-				<div class="ser-item  col-md-12">
-					<input type="checkbox" class="read-more-state" id="post-4" />
-					<img src="images/ser-item-4.png" alt="service" style="height:70px;">
-					<h2 style="height:52px">15050 VQ CONNECT</h2>
-					<p class="read-more-wrap">The 1505 VQ Connect service is to cater for customer who are particularly concern in terms of the rates offered.
-						<span class="read-more-target">It is packaged to ensure lowest rates possible in making an overseas call. This is somehow different from our Premium Connect as the call routing is based on lowest rates offered. Therefore, the quality can be fluctuative and it is not advisable to be used for faxing.<br>
-Despite that it is a budget service, CCS VQ Connect will try every best possible routing to ensure good quality calls delivered.</span></p>
-
-					<label for="post-4" class="read-more-trigger"></label>
+					<h2>CCS CALL BACK SERVICE</h2>
+					<p class="read-more-wrap">
+						<input type="checkbox" class="read-more-state" id="post-3" />
+						The CCS callback service is basically an alternative in making calls at lower rates while customers are roaming overseas.<span class="read-more-target"> It is an old but effective technique to make calls to any destination while you are traveling overseas. The effective savings can be as high as 60% down from normal calls made while roaming. CCS callback had tried our best to ensure high success rates to achieve a callback, and to outshine in call quality on our Tandem Based Network.
+						</span>
+						<label for="post-3" class="read-more-trigger"></label>
+					</p>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="ser-item  col-md-12">
-					<input type="checkbox" class="read-more-state" id="post-5" />
-					<img src="images/ser-item-5.png" alt="service" style="height:70px;">
-					<h2 style="height:52px">R TONE SERVICE</h2>
-					<p class="read-more-wrap">The R Tone service is a break through effort for our customers to affordable roaming services while travelling.
-						<span class="read-more-target">We have been spending gruelling effort to design and create an application which is able to reside in smart phones, to make and receive calls while customers travel overseas. Though there has been limitation to its availability, we are in search of a balance to ensure the solution can be consistent and maintain the highest quality for a decent business call. </span></p>
-
-					<label for="post-5" class="read-more-trigger"></label>
+			<div class="row">
+				<div class="ser-item col">
+					<img src="images/ser-item-4.png" alt="service" style="height:70px;">
+					<h2>15050 VQ CONNECT</h2>
+					<p class="read-more-wrap">
+						<input type="checkbox" class="read-more-state" id="post-4" />
+						The 1505 VQ Connect service is to cater for customer who are particularly concern in terms of the rates offered.<span class="read-more-target"> It is packaged to ensure lowest rates possible in making an overseas call. This is somehow different from our Premium Connect as the call routing is based on lowest rates offered. Therefore, the quality can be fluctuative and it is not advisable to be used for faxing. Despite that it is a budget service, CCS VQ Connect will try every best possible routing to ensure good quality calls delivered.</span>
+						<label for="post-4" class="read-more-trigger"></label>
+					</p>
 				</div>
-				<div class="ser-item  col-md-12">
-					<input type="checkbox" class="read-more-state" id="post-6" />
+				<div class="ser-item col">
+					<img src="images/ser-item-5.png" alt="service" style="height:70px;">
+					<h2>R TONE SERVICE</h2>
+					<p class="read-more-wrap">
+						<input type="checkbox" class="read-more-state" id="post-5" />
+						The R Tone service is a break through effort for our customers to affordable roaming services while travelling.<span class="read-more-target"> We have been spending gruelling effort to design and create an application which is able to reside in smart phones, to make and receive calls while customers travel overseas. Though there has been limitation to its availability, we are in search of a balance to ensure the solution can be consistent and maintain the highest quality for a decent business call.</span>
+						<label for="post-5" class="read-more-trigger"></label>
+					</p>
+				</div>
+				<div class="ser-item col">
 					<img src="images/ser-item-6.png" alt="serice" style="height:70px;">
-					<h2 style="height:52px">CCS IINTERNATIONAL CALL FORWARDING (ICF)</h2>
-					<p class="read-more-wrap">The ICF is basically to resolved the issues relating to high cost for incoming calls while travelling overseas.
-						<span class="read-more-target">It works with an overseas mobile number attained in the foreign destination. In most of the countries, incoming calls to their native prepaid mobile number is free. ICF is meant to provide a local number in Singapore that will link to your overseas mobile number, so that when the local number is called, you will be able to receive the call on your overseas mobile. In combining both CCS Callback Service and CCS International Call Forward Service, it will bring massive savings to your overall roaming bills. </span></p>
-
-					<label for="post-6" class="read-more-trigger"></label>
+					<h2>CCS IINTERNATIONAL CALL FORWARDING (ICF)</h2>
+					<p class="read-more-wrap">
+						<input type="checkbox" class="read-more-state" id="post-6" />
+						The ICF is basically to resolved the issues relating to high cost for incoming calls while travelling<span class="read-more-target"> overseas. It works with an overseas mobile number attained in the foreign destination. In most of the countries, incoming calls to their native prepaid mobile number is free. ICF is meant to provide a local number in Singapore that will link to your overseas mobile number, so that when the local number is called, you will be able to receive the call on your overseas mobile. In combining both CCS Callback Service and CCS International Call Forward Service, it will bring massive savings to your overall roaming bills. </span>
+						<label for="post-6" class="read-more-trigger"></label>
+					</p>
 				</div>
 			</div>
 		</div>
@@ -196,23 +144,23 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 		<main>
 
 			<input id="tab1" type="radio" name="tabs" checked>
-			<label for="tab1">1505 PREMIUM CONNECT / 15050 VQ CONNECT</label>
+			<label for="tab1">1505 PREMIUM CONNECT<br>15050 VQ CONNECT</label>
 
 			<input id="tab2" type="radio" name="tabs">
-			<label for="tab2">MOBILE SERVICE</label>
+			<label for="tab2">MOBILE<br>SERVICE</label>
 
 			<input id="tab3" type="radio" name="tabs">
-			<label for="tab3">CALL BACK SERVICE</label>
+			<label for="tab3">CALL BACK<br>SERVICE</label>
 
 			<input id="tab4" type="radio" name="tabs">
-			<label for="tab4">CALL FORWARDING SERVICE</label>
+			<label for="tab4">CALL FORWARDING<br>SERVICE</label>
 			<input id="tab5" type="radio" name="tabs">
-			<label for="tab5">R TONE SERVICE</label>
+			<label for="tab5">R TONE<br>SERVICE</label>
 			<input id="tab6" type="radio" name="tabs">
-			<label for="tab6">DEFINITIONS</label>
+			<label for="tab6" class="definitions">DEFINITIONS</label>
 
 			<section1 id="content1">
-				<div class="Q&A-1">
+				<div class="QA-1">
 					<button class="accordion">How do we dial oversea?
 						</button>
 					<div class="panel">
@@ -325,7 +273,7 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 			</section1>
 
 			<section1 id="content2">
-				<div class="Q&A-1">
+				<div class="QA-1">
 					<button class="accordion">How do we subscribe to CCS Mobile Services?
 						</button>
 					<div class="panel">
@@ -353,8 +301,7 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 			</section1>
 
 			<section1 id="content3">
-
-				<div class="Q&A-1">
+				<div class="QA-1">
 					<button class="accordion">What is CCS Callback Services?
   					</button>
 					<div class="panel">
@@ -373,7 +320,7 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 
 			<section1 id="content4">
 
-				<div class="Q&A-1">
+				<div class="QA-1">
 					<button class="accordion">What is CCS Call Forwarding Services?
   					</button>
 					<div class="panel">
@@ -391,9 +338,7 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 
 			</section1>
 			<section1 id="content5">
-
-
-				<div class="Q&A-1">
+				<div class="QA-1">
 					<button class="accordion">What is CCS R Tone Services?
 		</button>
 					<div class="panel">
@@ -425,9 +370,7 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 				</div>
 			</section1>
 			<section1 id="content6">
-
-
-				<div class="Q&A-1">
+				<div class="QA-1">
 					<button class="accordion">International Direct Dial
 		</button>
 					<div class="panel">
@@ -541,7 +484,6 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 				}
 			}
 		</script>
-		<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
 		<script src="js/responsiveTabs.js"></script>
 		<script>
 			$(document).ready(function () {
@@ -549,11 +491,8 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 			})
 		</script>
 	</section>
-
-	<div class="row"></div>
-
-	<section id="download" style="margin-top:500px !important;height:400px;">
-		<div class="download" style="margin-top:50%;">
+	<section id="download" style="margin-top:80px !important;height:400px;">
+		<div class="download">
 			<div class="col-md-6" style="margin-bottom:20px">
 				<a href="#">
 								<span class="icon" >
@@ -632,9 +571,6 @@ Despite that it is a budget service, CCS VQ Connect will try every best possible
 			</div>
 		</div>
 	</section>
-
-	<div class="row"></div>
-
 	<section id="contact" style="margin-top:80px !important">
 		<div class="contact">
 			<!--FORM-->

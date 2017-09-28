@@ -59,13 +59,25 @@ section {
     font-size:24px;
     line-height: 32px;
 }
+
+@media (max-width: 800px) {
+    .title {
+        width: 100% !important;
+        margin-left: 0;
+    }
+
+    .title .big-title {
+        font-size: 40px;
+    }
+}
+
 .service
 {
-	width:100%;
 	display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
+    max-width: 95% !important
 }
 .ser-item
 {
@@ -73,17 +85,29 @@ section {
 	margin:25px;
 	float: left;
 }
+
+.ser-item img {
+    margin-bottom: 25px;
+}
+
 .ser-item a
 {
 	text-decoration:none;
 }
+
+.ser-item p
+{
+    margin-bottom: 0;
+}
+
 .ser-item h2
 {
 	font-weight:bold;
 	font-size:24px;
 	color:#1565c0;
 	letter-spacing:0.28px;
-	text-align:center;
+    text-align:center;
+    margin-bottom: 25px;
 }
 article p
 {
@@ -278,3 +302,46 @@ input[type=submit]:hover {
 .col-md-10 {width: 83.33%;}
 .col-md-11 {width: 91.66%;}
 .col-md-12 {width: 100% !important;}*/
+
+.read-more-state {
+    display: none;
+}
+
+.read-more-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+}
+
+.read-more-state:checked~.read-more-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+}
+
+.read-more-state~.read-more-trigger:before {
+    content: '... \f054';
+}
+
+.read-more-state:checked~.read-more-trigger:before {
+    content: '\f053';
+}
+
+.read-more-trigger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    color: #00ACC1;
+    font-size: .9em;
+    line-height: 2;
+    margin: 0;
+}
+/* Other style */
+
+p {
+    padding: 2%;
+    color: #00ACC1;
+    width: 100%;
+    line-height: 22px;
+}
