@@ -277,6 +277,14 @@ input[type=submit]:hover {
 	float: left;
     padding: 15px;
 }*/
+
+@media (max-width: 800px) { 
+    .download {
+        margin-left:2%;
+        width:95%;
+    }
+}
+
 @media only screen and (min-width: 600px) {
     /* For tablets: */
     /*.col-md-1 {width: 8.33%;}
