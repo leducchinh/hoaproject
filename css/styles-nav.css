@@ -89,6 +89,7 @@ header {
   .navbar {
     padding-left: 20px !important;
     padding-right: 20px !important;
+    background:rgba(255,255,255,0.80);
   }
 
   .navbar .navbar-icon .navbar-brand img {
@@ -103,6 +104,10 @@ header {
   .navbar .navbar-collapse .menu-item.r-tone {
     display: initial;
     font-weight: normal;
+  }
+
+  .navbar .navbar-collapse .r-tone {
+    text-align: center;
   }
 }
 

@@ -70,6 +70,10 @@ label:hover {
   vertical-align: middle;
 }
 
+#FAQ label i {
+  display: none;
+}
+
 #FAQ .definitions {
   padding-top: 27px !important;
   padding-bottom: 27px !important;
@@ -107,6 +111,24 @@ label:hover {
   display: block;
 }
 
+@media (max-width: 800px) {
+  #FAQ .definitions {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+
+  #FAQ label .text {
+    display: none;
+  }
+
+  #FAQ label i {
+    display: initial;
+  }
+
+  #FAQ label {
+    font-size: 15px;
+  }
+}
 
 @media screen and (max-width: 650px) {
   label {

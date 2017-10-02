@@ -126,12 +126,11 @@ button.accordion {
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     padding: 10px;
-
     width: 100%;
     border: none;
     outline: none;
     transition: 0.6s;
-	font-family:Roboto-Regular;
+	font-family:Roboto;
 	font-size:20px;
 	color:#00acc1;
 	letter-spacing:0.23px;
@@ -146,6 +145,24 @@ div.panel {
     display: none;
 
 }
+
+button.accordion.active .fa-plus {
+    display: none;
+}
+
+button.accordion.active .fa-minus {
+    display: initial;
+}
+
+button.accordion .fa-minus {
+    display: none;
+}
+
+button.accordion .fa {
+    float: right !important;
+    margin-top: 5px;
+}
+
 .panel p
 {
 	color:#6c6c6c;
