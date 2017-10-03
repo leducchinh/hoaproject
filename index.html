@@ -23,6 +23,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.4/popper.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>	
 	<title>Connecting Communication & Solutions</title>
 </head>
 
@@ -75,7 +76,7 @@
 			</div>
 		</div>
 	</section>
-	<section style="margin-top:80px !important" id="service1">
+	<section id="service1">
 		<div class="container service">
 			<div class="row">
 				<div class="ser-item col">
@@ -140,9 +141,8 @@
 		</div>
 	</section>
 
-	<section style="margin-top:80px !important" id="FAQ">
+	<section id="FAQ">
 		<main>
-
 			<input id="tab1" type="radio" name="tabs" checked>
 			<label for="tab1">
 				<span class="text">1505 PREMIUM CONNECT<br>15050 VQ CONNECT</span>
@@ -569,7 +569,7 @@
 			})
 		</script>
 	</section>
-	<section id="download" style="margin-top:80px !important;">
+	<section id="download">
 		<div class="download">
 			<div class="col-md-6" style="margin-bottom:20px">
 				<a href="#">
@@ -649,82 +649,96 @@
 			</div>
 		</div>
 	</section>
-	<section id="contact" style="margin-top:80px !important">
-		<div class="contact">
+	<section id="contact">
+		<div class="contact" class="full-width">
 			<!--FORM-->
-			<div class="col-md-12 row">
-				<div class="form col-md-5" style="margin-top:0px !important;margin-bottom:0px !important">
+			<div class="row">
+				<div class="col-md-5 contact-form">
 					<form action="/action_page.php">
-						<input style="margin-top:0px !important" type="text" id="name" name="fullname" placeholder="Your name...">
-						<input type="text" style="margin-top:0px !important" id="email" name="email" placeholder="Your email...">
-						<select style="margin-top:0px !important;height:59px !important" id="contacts" name="department">
-					  <option value="cs">Customer Service</option>
-					  <option value="sales">Sales</option>
-					  <option value="billing">Billing</option>
-					</select>
+						<input type="text" id="name" name="fullname" placeholder="Your name...">
+						<input type="text" id="email" name="email" placeholder="Your email...">
+						<select id="contacts" name="department">
+							<option value="cs">Customer Service</option>
+							<option value="sales">Sales</option>
+							<option value="billing">Billing</option>
+						</select>
 						<textarea style="margin-top:20px !important" id="message" rows="5" cols="auto" placeholder="Your Message..."></textarea>
-						<input type="submit" value="SEND" style=";margin-bottom:0px !important;display:initial">
+						<div class="row contact-form-action">
+							<div class="col-md-6 col-sm-6 col-xs-6"><div class="g-recaptcha" data-sitekey="6LeABTMUAAAAAB87ovuRjNHjQAcT799SVYMZPSGN"></div></div>
+							<div class="col-md-6 col-sm-6 col-xs-6"><input type="submit" value="SEND" style="margin-bottom:0px !important; display:initial"></div>
+						</div>
 					</form>
 				</div>
 				<!--ENDS FORM-->
-				<div class="col-md-5">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.734819770699!2d103.90261331443114!3d1.3353203619947098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da17faccca7171%3A0x7b4956afa461f209!2sConnecting+Communication+%26+Solutions+Pte+Ltd!5e0!3m2!1sen!2s!4v1505989210360"
-					 min-width="100%" min-height="100" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+				<div class="col-md-7 contact-map">
+					<script>
+						function showAdr(adr) {
+							if (adr == "singapore") {
+								document.getElementById("singapore").style.display = 'block';
+								document.getElementById("vietnam").style.display = 'none';
+							} else {
+								document.getElementById("singapore").style.display = 'none';
+								document.getElementById("vietnam").style.display = 'block';
+							}
+						}
+					</script>
+					<iframe id="singapore"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.734819770699!2d103.90261331443114!3d1.3353203619947098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da17faccca7171%3A0x7b4956afa461f209!2sConnecting+Communication+%26+Solutions+Pte+Ltd!5e0!3m2!1sen!2s!4v1505989210360"
+					 width="100%" height="50%" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<iframe id="vietnam"
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7838.193831588787!2d106.65810705778728!3d10.803888908403394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175293ac6176469%3A0xdf9827dd16b6929b!2zMkIgUGhhbiBUaMO6YyBEdXnhu4duLCBQaMaw4budbmcgNCwgVMOibiBCw6xuaCwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1507055043213"
+					  width="100%" height="50%" frameborder="0" style="border:0; display:none;" allowfullscreen></iframe>
+					 <div class="row">
+							<div class="col-md-6 address" onclick="showAdr('singapore')">
+								<h3>SINGAPORE</h3>
+								<span>
+									63 Kaki Bukit Place #05-01<br>
+									Singapore 416234<br>
+									Phone: +65 67481737<br>
+									Fax: +65 67484812<br>
+									Customer Service: service@ccsidd.com
+								</span>
+							</div>
+							<div class="col-md-6 address" onclick="showAdr('vietnam')">
+									<h3>VIETNAM</h3>
+									<span>
+										(Representative Office)<br>
+										2B Phan Thuc Duyen Street,<br>
+										District Tan Binh, Ward 4<br>
+										Ho Chi Minh City
+									</span>
+								</div>
+					 </div>
 				</div>
 			</div>
-
-			<!-- <h1>Responsive CSS Tabs</h1> -->
-
-			<footer class="footer-distributed">
-				<div class="footer-left">
-					<h3>
-						Connecting Communication & Solutions
-					</h3>
-					<p class="footer-links">
-						<a href="#">About</a> ·
-						<a href="#">Service</a> ·
-						<a href="#">FAQ</a> ·
-						<a href="#">Download</a> ·
-						<a href="#">Contact</a>
-					</p>
-					<p class="footer-company-name">CCS &copy; 2017</p>
-				</div>
-				<div class="footer-center">
-					<div>
-						<i class="fa fa-map-marker"></i>
-						<p style="width:auto !important"><span>63 Kaki Bukit Place #05-01</span> Singapore 416234</p>
-					</div>
-					<div>
-						<i class="fa fa-phone"></i>
-						<p style="width:auto !important">+65 67481737</p>
-
-					</div>
-					<div>
-						<i class="fa fa-envelope"></i>
-						<p style="width:auto !important"><a href="mailto:service@ccsidd.com">service@ccsidd.com</a></p>
-					</div>
-				</div>
-				<div class="footer-right">
-					<div>
-						<i class="fa fa-map-marker"></i>
-						<p style="width:auto !important"><span>(Viet Nam Representative Office)<br>
-						2B Phan Thuc Duyen Street,<br>
-						District Tan Binh, Ward 4</span> Ho Chi Minh City</p>
-					</div>
-
-				</div>
-			</footer>
 		</div>
 	</section>
-
-
-
+	<div class="footer">
+		<div class="row full-width">
+			<div class="col-md-6">
+				<a href="#">Home</a> | 
+				<a href="#">About</a> | 
+				<a href="#">Service</a> | 
+				<a href="#">Download</a> | 
+				<a href="#">Contact</a>
+			</div>
+			<div class="col-md-6">
+				copy right 2017 - All Right Reserved
+			</div>
+		</div>
+		<div class="mobile">
+					<a href="#">Home</a> | 
+					<a href="#">About</a> | 
+					<a href="#">Service</a> | 
+					<a href="#">Download</a> | 
+					<a href="#">Contact</a>
+					<br>
+					copy right 2017 - All Right Reserved
+			</div>
+	</div>
 	<script src="js/fastclick.js"></script>
 	<script src="js/scroll.js"></script>
 	<script src="js/fixed-responsive-nav.js"></script>
-
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
 </body>
 
 </html>
