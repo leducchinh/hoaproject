@@ -15,11 +15,15 @@ body {
 
 section {
   padding-top: 80px;
+  margin-top: 80px;
   width: 100%;
+  display:block;
+  min-height: 100vh;
 }
 
 #about{
     padding-top: 0;
+    margin-top: 0;
 	width:100%;
 	height:800px;
 	background-image: url(../images/bg-home-2.png);
@@ -166,6 +170,10 @@ button.accordion .fa {
     margin-top: 5px;
 }
 
+.panel {
+    padding: 0 !important;
+}
+
 .panel p
 {
 	color:#6c6c6c;
@@ -174,7 +182,8 @@ button.accordion .fa {
 	font-weight:300;
 	letter-spacing:0.19px;
 	line-height:30px;
-
+    padding-left: 0;
+    padding-right: 0;
 }
 .panel p a:link {
 	color: #1565c0;
@@ -207,7 +216,6 @@ panel p a:active {
     display: flex;
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
-
 }
 .download a
 {
@@ -215,6 +223,19 @@ panel p a:active {
 	color:#1565c0;
 	font-weight:600;
 }
+
+.download .download-icon {
+    float: left;
+}
+
+.download .download-desc {
+    font-size: 15px;
+    float: left;
+    position: absolute;
+    margin-left: 60px;
+    margin-top: -10px;
+}
+
 .contact
 {
 	width:100%;
@@ -313,7 +334,6 @@ input[type=submit]:hover {
 }
 
 .footer {
-    margin-top: 80px;
     background-color: #00acc1;
     color: white;
     padding-left: 55px;
@@ -334,10 +354,21 @@ input[type=submit]:hover {
     text-align: right;
 }
 
+@media (max-width: 1500px) {
+    .contact-map iframe {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+}
+
 @media (max-width: 800px) { 
     .download {
         margin-left:0;
         width:100%;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .contact {
@@ -393,6 +424,13 @@ input[type=submit]:hover {
 
     .footer .row.full-width {
         display: none;
+    }
+
+    .download .download-desc {
+        width: 250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 

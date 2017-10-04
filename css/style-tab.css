@@ -111,6 +111,15 @@ label:hover {
   display: block;
 }
 
+@media (min-width: 800px) and (max-width: 1500px) {
+  #FAQ label div{
+    text-overflow: ellipsis;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 800px) {
   #FAQ .definitions {
     padding-top: 15px !important;
