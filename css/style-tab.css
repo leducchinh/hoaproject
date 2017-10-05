@@ -15,7 +15,8 @@ p {
 main {
   min-width: 100%;
   max-width: 100;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin: 0 auto;
 }
 
