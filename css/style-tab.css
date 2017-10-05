@@ -137,6 +137,18 @@ label:hover {
   #FAQ label {
     font-size: 15px;
   }
+
+  #FAQ input:checked + label:after {
+    border-top-color: #1565c0;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+  
+  #FAQ input:checked + label:before {
+    border-top-color: #1565c0;
+    border-width: 10px;
+    margin-left: -10px;
+  }
 }
 
 @media screen and (max-width: 650px) {
