@@ -71,6 +71,7 @@ header {
   color:#1565c0;
   letter-spacing:0.28px;
   text-align:right;
+  z-index: 3;
 }
 
 .navbar .navbar-collapse .r-tone a {
